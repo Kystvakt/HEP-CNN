@@ -7,6 +7,10 @@
 #PBS -W sandbox=PRIVATE
 #PBS -A etc
 
+source /apps/compiler/intel/19.0.4/impi/2019.4.243/intel64/bin/mpivars.sh relase_mt
+source /apps/applications/miniconda3/etc/profile.d/conda.sh
+conda activate tf_v1.13
+
 env
 cat /proc/cpuinfo | grep process
 echo "NCPUS=" `nproc` $NCPUS
